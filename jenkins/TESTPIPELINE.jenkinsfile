@@ -1,9 +1,10 @@
 pipeline {
-    agent any {
-        stages {
-            stage("ECHO TEST") {
-                echo "test"
-            }
+    agent {
+        docker { image 'jenkins-pipeline' }
+    }
+    stages {
+        stage("ECHO TEST") {
+            echo "test"
         }
     }
 }
