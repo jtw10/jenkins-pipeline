@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docket {
+        docker {
             stage ("ECHO TEST") {
                 echo "test"
             }
