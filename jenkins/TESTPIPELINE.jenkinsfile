@@ -1,8 +1,10 @@
 pipeline {
     agent {
         docker {
-            stage ("ECHO TEST") {
-                echo "test"
+            stages {
+                stage ("ECHO TEST") {
+                    echo "test"
+                }
             }
         }
     }
