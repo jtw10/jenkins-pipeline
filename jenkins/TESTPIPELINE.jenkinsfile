@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     environment {
         PLACEHOLDER_VARIABLE = 'placeholder'
     }
