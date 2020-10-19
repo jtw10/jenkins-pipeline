@@ -3,6 +3,10 @@ pipeline {
         docker { image 'jenkins-pipeline' }
     }
     stages {
+        stage('Initialize') {
+            def dockerHome = tool 'jenkins_pipeline'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+        }
         stage("ECHO TEST") {
             steps {
                 echo "test"
