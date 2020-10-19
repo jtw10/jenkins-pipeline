@@ -1,7 +1,4 @@
 pipeline {
-    agent {
-        docker { image 'jenkins-pipeline' }
-    }
     stages {
         stage("ECHO TEST") {
             steps {
