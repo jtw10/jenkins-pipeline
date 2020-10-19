@@ -11,9 +11,7 @@ pipeline {
         }
         stage("TEST BASH") {
             steps {
-                bash '''#!/bin/bash
-                ls -l
-                '''
+                sh "ls -l"
             }
         }
     }
