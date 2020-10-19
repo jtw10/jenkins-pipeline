@@ -1,9 +1,19 @@
 pipeline {
     agent none
+    environment {
+        PLACEHOLDER_VARIABLE = 'placeholder'
+    }
     stages {
         stage("ECHO TEST") {
             steps {
                 echo "test"
+            }
+        }
+        stage("TEST BASH") {
+            steps {
+                bash '''#!/bin/bash
+                ls -l
+                '''
             }
         }
     }
