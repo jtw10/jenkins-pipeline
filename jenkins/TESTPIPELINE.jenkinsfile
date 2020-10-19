@@ -1,8 +1,8 @@
 pipeline {
     agent {
-        docker {
+        any {
             stages {
-                stage ("ECHO TEST") {
+                stage("ECHO TEST") {
                     echo "test"
                 }
             }
