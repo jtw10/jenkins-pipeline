@@ -6,7 +6,6 @@ pipeline {
     stage('Install dependencies') {
       steps {
         sh 'npm ci'
-        sh 'npm run cy:verify'
       }
     }   
 
