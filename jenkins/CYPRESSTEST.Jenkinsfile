@@ -18,7 +18,7 @@ pipeline {
 
     stage('build') {
       steps {          
-        sh 'npx cypress run --headless'
+        sh 'npx cypress run --config-file ig-bot/cypress.json --headless'
       }
     }
   }
