@@ -12,7 +12,7 @@ pipeline {
 
     stage('build') {
       steps {          
-        sh 'cypress run'
+        sh 'cypress open'
       }
     }
   }
