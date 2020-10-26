@@ -2,12 +2,11 @@ pipeline {
   agent any
   tools {nodejs "node"}
   stages {
-    // clone repo
-    // stage('clone repo') {
-    //     steps {    
-    //         sh 'git clone https://github.com/jtw10/jenkins-pipeline'
-    //     }
-    // }
+    stage('pull repo') {
+        steps {    
+            sh 'git pull https://github.com/jtw10/jenkins-pipeline'
+        }
+    }
 
     // stage('Install dependencies') {
     //   steps {
