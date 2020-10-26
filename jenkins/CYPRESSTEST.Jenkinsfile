@@ -7,7 +7,7 @@ pipeline {
             sh 'git pull https://github.com/jtw10/jenkins-pipeline'
         }
     }
-    stage('build') {
+    stage('run cypress') {
       steps {          
         sh 'npx cypress run --config-file ig-bot/cypress.json --headless'
       }
