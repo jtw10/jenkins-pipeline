@@ -5,7 +5,7 @@ pipeline {
     // first stage installs node dependencies and Cypress binary
     stage('Install dependencies') {
       steps {
-        echo 'test'
+        echo 'sudo apt-get update && apt-get -y install xvfb'
       }
     }   
 
