@@ -12,7 +12,7 @@ pipeline {
 
     stage('build') {
       steps {          
-        sh 'cypress open'
+        sh 'npx cypress run --config-file cypress.json --headless'
       }
     }
   }
