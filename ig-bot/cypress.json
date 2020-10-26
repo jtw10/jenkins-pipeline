@@ -1,4 +1,6 @@
 {
     "defaultCommandTimeout": 2000,
-    "video": false
+    "video": false,
+    "integrationFolder": "./ig-bot/cypress/integration",
+    "testFiles": "**.spec.js"
   }
