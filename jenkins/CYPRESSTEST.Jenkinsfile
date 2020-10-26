@@ -10,7 +10,6 @@ pipeline {
         // http://localhost:8080/pipeline-syntax/globals#env
 
         // echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
-        sh 'which npm'
         sh '/usr/bin/npm install'
         sh 'npm run cy:verify'
       }
