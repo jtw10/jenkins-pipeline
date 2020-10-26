@@ -6,6 +6,7 @@ pipeline {
     stage('Install dependencies') {
       steps {
         sh 'npm i -save express'
+        sh 'npm install cypress --save-dev'
       }
     }   
 
@@ -16,25 +17,8 @@ pipeline {
         // http://localhost:8080/pipeline-syntax/globals#env
 
         // echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
-        sh 'npm ci'
-        sh 'npm run cy:verify'
+        sh 'cypress run'
       }
-    }
-
-    stage('start local server') {
-      steps {
-        // start local server in the background
-        // we will shut it down in "post" command block
-        sh 'nohup npm run start:ci &'
-      }
-    }
-  }
-
-  post {
-    // shutdown the server running in the background
-    always {
-      echo 'Stopping local server'
-      sh 'pkill -f http-server'
     }
   }
 }
