@@ -5,7 +5,7 @@ pipeline {
     // clone repo
     stage('clone repo') {
         steps {
-            sh 'git https://github.com/jtw10/jenkins-pipeline'
+            sh 'git clone https://github.com/jtw10/jenkins-pipeline'
         }
     }
 
