@@ -12,7 +12,7 @@ pipeline {
 
     stage('build') {
       steps {          
-        sh 'cypress run --headless'
+        sh 'cypress open'
       }
     }
   }
