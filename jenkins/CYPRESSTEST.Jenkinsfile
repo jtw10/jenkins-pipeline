@@ -4,7 +4,7 @@ pipeline {
   stages {
     // clone repo
     // stage('clone repo') {
-    //     steps {
+    //     steps {    
     //         sh 'git clone https://github.com/jtw10/jenkins-pipeline'
     //     }
     // }
@@ -17,9 +17,8 @@ pipeline {
     // }   
 
     stage('build') {
-      steps {
-        sh 'cd ig-bot'          
-        sh 'npx cypress run --headless'
+      steps {          
+        sh 'npx cypress run --config-file ig-bot/cypress.json --headless'
       }
     }
   }
