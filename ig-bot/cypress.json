@@ -1,4 +1,5 @@
 {
     "defaultCommandTimeout": 2000,
-    "video": false
+    "video": false,
+    "integrationFolder": "cypress/integration"
   }
