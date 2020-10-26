@@ -12,7 +12,7 @@ pipeline {
 
     stage('build') {
       steps {          
-        sh 'cypress run --config pageLoadTimeout=100000,watchForFileChanges=false --headless'
+        sh 'cypress run --headless'
       }
     }
   }
