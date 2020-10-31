@@ -2,8 +2,8 @@ pipeline {
   agent any
   tools {nodejs 'node'}
   parameters {
-      string(name: 'Username', description: 'Enter your username')
-      password(name: 'Password', description: 'Enter your password')
+      text(name: 'Username', description: 'Enter your username')
+      text(name: 'Password', description: 'Enter your password')
   }
   stages {
     stage('pull repo') {
