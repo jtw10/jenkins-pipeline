@@ -1,23 +1,24 @@
 /// <reference types="cypress" />
 
 context('Window', () => {
-    beforeEach(() => {
-      cy.visit('https://example.cypress.io/commands/window')
-    })
-  
-    it('cy.window() - get the global window object', () => {
-      // https://on.cypress.io/window
-      cy.window().should('have.property', 'top')
-    })
-  
-    it('cy.document() - get the document object', () => {
-      // https://on.cypress.io/document
-      cy.document().should('have.property', 'charset').and('eq', 'UTF-8')
-    })
-  
-    it('cy.title() - get the title', () => {
-      // https://on.cypress.io/title
-      cy.title().should('include', 'Kitchen Sink')
-    })
+  const waitTime = Math.floor((Math.random() * 10) + 1000);
+
+  before(() => {
+    cy.clearCookies()
+    cy.visit('https://instagram.com')
   })
-  
+
+  it('get login field', () => {
+    cy.get('[name="username"]').type('')
+    cy.get('[name="password"]').type('')
+    cy.get('.sqdOP > .Igw0E').click({ force: true })
+    cy.wait(waitTime)
+
+    // clear save login info message
+    cy.get('button').should('contain.text', 'Not Now').last().click()
+    cy.wait(waitTime)
+
+    // clear turn on notifications message
+    cy.get('button').should('contain.text', 'Not Now').last().click()
+  })
+})
