@@ -24,3 +24,6 @@ yarn-error.log*
 
 # to do list
 TODO.txt
+
+# temp config file
+creds.js
