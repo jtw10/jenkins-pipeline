@@ -1,3 +1,8 @@
+/*
+Test file - used to check that user can be authenticated successfully.
+Can enter username and password to manually run this spec file 
+*/
+
 /// <reference types="cypress" />
 
 context('Window', () => {
