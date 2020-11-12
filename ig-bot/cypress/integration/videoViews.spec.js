@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 // import * as userData from '../fixtures/creds.json'
 
-userData.users.forEach(user => {
+// userData.users.forEach(user => {
     context('Window', () => {
         const waitTime = Math.floor((Math.random() * 10) + 1000)
         const viewTime = 5500
@@ -44,5 +44,5 @@ userData.users.forEach(user => {
             // cy.get('[aria-label="Like"]').click({ froce: true });
         })
     })
-})
+// })
   
