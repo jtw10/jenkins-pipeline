@@ -13,7 +13,7 @@ context('Window', () => {
         cy.visit('https://instagram.com')
     })
 
-    it('get login field', () => {
+    it.skip('get login field', () => {
         cy.get('[name="username"]').type('')
         cy.get('[name="password"]').type('')
         cy.get('.sqdOP > .Igw0E').click({ force: true })
