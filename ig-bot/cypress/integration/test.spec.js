@@ -5,7 +5,7 @@ Can enter username and password to manually run this spec file
 
 /// <reference types="cypress" />
 
-context('Window', () => {
+context('Test Spec', () => {
     const waitTime = Math.floor((Math.random() * 10) + 1000);
 
     before(() => {

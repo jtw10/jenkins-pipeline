@@ -2,8 +2,8 @@
 // import * as userData from '../fixtures/creds.json'
 
 // userData.users.forEach(user => {
-    context('Window', () => {
-        console.log(userData)
+    context('Video Views', () => {
+        // console.log(userData)
         const waitTime = Math.floor((Math.random() * 10) + 1000)
         const viewTime = 5500
     
