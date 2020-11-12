@@ -7,7 +7,7 @@
         const viewTime = 5500
     
         before(() => {
-            cy.log(user.username)
+            // cy.log(user.username)
             cy.clearCookies()
             cy.visit('https://www.instagram.com/accounts/login/')
         })
