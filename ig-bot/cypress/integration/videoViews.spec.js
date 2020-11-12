@@ -12,7 +12,7 @@
             cy.visit('https://www.instagram.com/accounts/login/')
         })
     
-        it(`video views - account: ${user.username}`, () => {
+        it(`video views - account: `, () => {
             // log user in
             // cy.get('[name="username"]').type(user.username)
             // cy.get('[name="password"]').type(user.password)
