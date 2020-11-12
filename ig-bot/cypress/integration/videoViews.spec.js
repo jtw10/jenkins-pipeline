@@ -3,6 +3,7 @@
 
 // userData.users.forEach(user => {
     context('Window', () => {
+        console.log(userData)
         const waitTime = Math.floor((Math.random() * 10) + 1000)
         const viewTime = 5500
     
@@ -12,7 +13,7 @@
             cy.visit('https://www.instagram.com/accounts/login/')
         })
     
-        it(`video views - account: `, () => {
+        it(`video views - account: ${Cypress.env('testvar')}`, () => {
             // log user in
             // cy.get('[name="username"]').type(user.username)
             // cy.get('[name="password"]').type(user.password)
@@ -37,7 +38,6 @@
 
             // visit video
             // cy.visit('')
-            cy.log(Cypress.env('testvar'))
             cy.wait(viewTime)
 
             // like post
