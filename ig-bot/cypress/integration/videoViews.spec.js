@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import * as userData from '../fixtures/creds.json'
+// import * as userData from '../fixtures/creds.json'
 
 userData.users.forEach(user => {
     context('Window', () => {
