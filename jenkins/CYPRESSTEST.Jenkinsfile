@@ -13,7 +13,7 @@ pipeline {
     }
     stage('run cypress') {
       steps {          
-        sh 'npx cypress run --config-file ig-bot/cypress.json --headless'
+        sh 'npx cypress run --config-file ig-bot/cypress.json --headless --env testvar=jimbobby'
       }
     }
   }
